@@ -6,7 +6,7 @@ const { categories } = useCategories();
 </script>
 
 <template>
-  <div>
+  <div class="w-[30%]">
     <CategoryMenu :categories="categories" />
   </div>
 </template>

@@ -6,6 +6,7 @@ export default function useCategories() {
     collectionPaintings.categories.map((category, index) => ({
       ...category,
       id: index + 1,
+      isActive: index === 0,
     })),
   );
 
