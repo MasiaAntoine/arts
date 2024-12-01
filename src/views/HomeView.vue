@@ -1,3 +1,12 @@
+<script setup>
+import useCategories from "../hooks/useCategories";
+import CategoryMenu from "../components/CategoryMenu.vue";
+
+const { categories } = useCategories();
+</script>
+
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <div>
+    <CategoryMenu :categories="categories" />
+  </div>
 </template>
