@@ -22,7 +22,7 @@ defineProps({
 
 <template>
   <SectionApp class="flex flex-col justify-between gap-10">
-    <div class="overflow-y-auto">
+    <div class="overflow-y-auto no-scrollbar">
       <h1 class="text-5xl font-extrabold uppercase italic">
         {{ activeCategory?.name }}
       </h1>
@@ -30,7 +30,7 @@ defineProps({
         <PopularPaintings :paintings="popularPaintings" />
         <NoPopularPaintings :paintings="noPopularPaintings" />
       </div>
+      <FooterApp />
     </div>
-    <FooterApp />
   </SectionApp>
 </template>

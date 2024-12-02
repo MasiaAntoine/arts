@@ -8,3 +8,12 @@ body {
   @apply bg-paleWhite-100;
   font-family: "Sour Gummy", sans-serif;
 }
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

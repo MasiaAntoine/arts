@@ -7,6 +7,13 @@ export default {
         paleWhite: {
           100: "#f8f8f8",
         },
+        black: "rgb(18, 18, 18)",
+      },
+      textColor: {
+        black: "rgb(18, 18, 18)",
+      },
+      backgroundColor: {
+        black: "rgb(18, 18, 18)",
       },
     },
   },

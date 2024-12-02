@@ -1,11 +1,11 @@
-import eclatsDespoir from "@/assets/canvas/Éclats d'Espoir.jpg";
-import eveilDeLame from "@/assets/canvas/Éveil De L'âme.jpg";
-import lenfermementDesTenebres from "@/assets/canvas/L'Enfermement des Ténèbres.jpg";
-import lenvolDesDamnes from "@/assets/canvas/L'Envol des Damnés.jpg";
-import lobservateurCache from "@/assets/canvas/L'Observateur Caché.jpg";
-import laubeDeLeternite from "@/assets/canvas/Laube De L'éternité.jpg";
-import lePoidsDeLAmour from "@/assets/canvas/Le Poids de l'Amour.jpg";
-import leSilenceDuReflet from "@/assets/canvas/Le silence du reflet.jpg";
+import eclatsDespoir from "@/assets/canvas/EclatsEspoir.jpg";
+import eveilDeLame from "@/assets/canvas/EveilDeAme.jpg";
+import lenfermementDesTenebres from "@/assets/canvas/EnfermementDesTenebres.jpg";
+import lenvolDesDamnes from "@/assets/canvas/EnvolDesDamnes.jpg";
+import lobservateurCache from "@/assets/canvas/ObservateurCache.jpg";
+import laubeDeLeternite from "@/assets/canvas/LaubeDeEternite.jpg";
+import lePoidsDeLAmour from "@/assets/canvas/LePoidsDeAmour.jpg";
+import leSilenceDuReflet from "@/assets/canvas/LeSilenceDuReflet.jpg";
 
 const collectionPaintings = {
   categories: [
@@ -16,7 +16,7 @@ const collectionPaintings = {
         {
           title: "Éclats d'Espoir",
           artist: "Antoine Masia",
-          date: 2024,
+          date: "11/12/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
@@ -41,7 +41,7 @@ const collectionPaintings = {
         {
           title: "L'Envol des Damnés",
           artist: "Antoine Masia",
-          date: 2024,
+          date: "11/12/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
@@ -78,7 +78,7 @@ const collectionPaintings = {
         {
           title: "Le silence du reflet",
           artist: "Antoine Masia",
-          date: 2024,
+          date: "11/12/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
