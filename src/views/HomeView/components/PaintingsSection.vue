@@ -1,6 +1,6 @@
 <script setup>
-import SectionApp from "./SectionApp.vue";
-import FooterApp from "./FooterApp.vue";
+import SectionApp from "@/components/SectionApp.vue";
+import FooterApp from "@/components/FooterApp.vue";
 import PopularPaintings from "./PopularPaintings.vue";
 import NoPopularPaintings from "./NoPopularPaintings.vue";
 

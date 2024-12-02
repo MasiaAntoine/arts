@@ -64,18 +64,6 @@ const collectionPaintings = {
           description: "Description for L'Observateur Caché.",
         },
         {
-          title: "Laube De L'éternité",
-          artist: "Antoine Masia",
-          date: 2024,
-          dimensions: {
-            width: "unknown",
-            height: "unknown",
-          },
-          technique: "unknown",
-          imageURL: laubeDeLeternite,
-          description: "Description for Laube De L'éternité.",
-        },
-        {
           title: "Le Poids de l'Amour",
           artist: "Antoine Masia",
           date: 2024,
@@ -117,6 +105,18 @@ const collectionPaintings = {
           technique: "unknown",
           imageURL: eveilDeLame,
           description: "Description for Éveil De L'âme.",
+        },
+        {
+          title: "Laube De L'éternité",
+          artist: "Antoine Masia",
+          date: 2024,
+          dimensions: {
+            width: "unknown",
+            height: "unknown",
+          },
+          technique: "unknown",
+          imageURL: laubeDeLeternite,
+          description: "Description for Laube De L'éternité.",
         },
       ],
     },

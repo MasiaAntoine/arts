@@ -1,8 +1,8 @@
 <script setup>
-import useCategories from "../hooks/useCategories";
-import usePaintings from "../hooks/usePaintings";
-import CategoryMenu from "../components/CategoryMenu.vue";
-import PaintingsSection from "../components/PaintingsSection.vue";
+import useCategories from "@/hooks/useCategories";
+import usePaintings from "@/hooks/usePaintings";
+import CategoryMenu from "@/components/CategoryMenu.vue";
+import PaintingsSection from "./components/PaintingsSection.vue";
 
 const { categories, activeCategory, setActiveCategory } = useCategories();
 const { popularPaintings, noPopularPaintings } = usePaintings(

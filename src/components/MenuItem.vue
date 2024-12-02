@@ -32,7 +32,7 @@ defineProps({
       :alt="category.name"
       :class="[
         'h-20 rounded-md transition-all group-hover:scale-125 group-hover:rotate-6',
-        { 'scale-110': isActive },
+        { 'scale-110 ': isActive },
       ]"
     />
   </li>
