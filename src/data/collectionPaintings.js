@@ -16,7 +16,7 @@ const collectionPaintings = {
         {
           title: "Éclats d'Espoir",
           artist: "Antoine Masia",
-          date: "11/12/2024",
+          date: "11/24/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
@@ -29,7 +29,7 @@ const collectionPaintings = {
         {
           title: "L'Enfermement des Ténèbres",
           artist: "Antoine Masia",
-          date: 2024,
+          date: "11/13/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
@@ -41,7 +41,7 @@ const collectionPaintings = {
         {
           title: "L'Envol des Damnés",
           artist: "Antoine Masia",
-          date: "11/12/2024",
+          date: "11/29/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
@@ -54,7 +54,7 @@ const collectionPaintings = {
         {
           title: "L'Observateur Caché",
           artist: "Antoine Masia",
-          date: 2024,
+          date: "11/18/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
@@ -66,7 +66,7 @@ const collectionPaintings = {
         {
           title: "Le Poids de l'Amour",
           artist: "Antoine Masia",
-          date: 2024,
+          date: "11/23/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
@@ -78,7 +78,7 @@ const collectionPaintings = {
         {
           title: "Le silence du reflet",
           artist: "Antoine Masia",
-          date: "11/12/2024",
+          date: "11/26/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
@@ -97,7 +97,7 @@ const collectionPaintings = {
         {
           title: "Éveil De L'âme",
           artist: "Antoine Masia",
-          date: 2024,
+          date: "12/01/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",
@@ -109,7 +109,7 @@ const collectionPaintings = {
         {
           title: "Laube De L'éternité",
           artist: "Antoine Masia",
-          date: 2024,
+          date: "11/30/2024",
           dimensions: {
             width: "unknown",
             height: "unknown",

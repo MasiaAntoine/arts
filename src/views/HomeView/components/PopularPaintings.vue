@@ -5,6 +5,25 @@ defineProps({
     required: true,
   },
 });
+
+const reformatDate = (dateStr) => {
+  const months = [
+    "janv.",
+    "févr.",
+    "mars",
+    "avr.",
+    "mai",
+    "juin",
+    "juil.",
+    "août",
+    "sept.",
+    "oct.",
+    "nov.",
+    "déc.",
+  ];
+  const [month, day, year] = dateStr.split("/");
+  return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
+};
 </script>
 
 <template>
@@ -33,7 +52,7 @@ defineProps({
             <h3 class="text-xl">
               {{ painting.title }}
             </h3>
-            <div>{{ painting.date }}</div>
+            <div>{{ reformatDate(painting.date) }}</div>
           </div>
         </div>
 
