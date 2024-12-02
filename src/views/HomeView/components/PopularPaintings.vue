@@ -10,8 +10,8 @@ defineProps({
 </script>
 
 <template>
-  <div v-if="paintings.length >= 1">
-    <h2 class="text-2xl pt-12 pb-2">Œuvres Populaires</h2>
+  <div class="pb-12" v-if="paintings.length >= 1">
+    <h2 class="text-2xl pb-2">Œuvres Populaires</h2>
 
     <div class="w-[67vw] flex gap-8 overflow-x-auto h-52 no-scrollbar">
       <div

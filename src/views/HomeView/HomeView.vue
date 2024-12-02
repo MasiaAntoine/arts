@@ -42,19 +42,21 @@ watch(
 </script>
 
 <template>
-  <HeaderApp />
+  <div class="flex flex-col h-full gap-6 justify-between">
+    <HeaderApp class="h-24" />
 
-  <div class="flex justify-between gap-4 h-full py-4">
-    <CategoryMenu
-      class="w-96"
-      :categories="categories"
-      @set-active-category="setActiveCategory"
-    />
-    <PaintingsSection
-      class="w-full"
-      :activeCategory="activeCategory"
-      :popularPaintings="popularPaintings"
-      :noPopularPaintings="noPopularPaintings"
-    />
+    <div class="flex justify-between gap-4 h-full">
+      <CategoryMenu
+        class="w-96"
+        :categories="categories"
+        @set-active-category="setActiveCategory"
+      />
+      <PaintingsSection
+        class="w-full"
+        :activeCategory="activeCategory"
+        :popularPaintings="popularPaintings"
+        :noPopularPaintings="noPopularPaintings"
+      />
+    </div>
   </div>
 </template>
