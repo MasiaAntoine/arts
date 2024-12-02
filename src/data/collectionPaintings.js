@@ -10,7 +10,7 @@ import leSilenceDuReflet from "@/assets/canvas/Le silence du reflet.jpg";
 const collectionPaintings = {
   categories: [
     {
-      name: "Catharsis",
+      name: "catharsis",
       coverImage: eclatsDespoir,
       paintings: [
         {
@@ -24,18 +24,7 @@ const collectionPaintings = {
           technique: "unknown",
           imageURL: eclatsDespoir,
           description: "Description for Éclats d'Espoir.",
-        },
-        {
-          title: "Éveil De L'âme",
-          artist: "Antoine Masia",
-          date: 2024,
-          dimensions: {
-            width: "unknown",
-            height: "unknown",
-          },
-          technique: "unknown",
-          imageURL: eveilDeLame,
-          description: "Description for Éveil De L'âme.",
+          isPopular: true,
         },
         {
           title: "L'Enfermement des Ténèbres",
@@ -60,6 +49,7 @@ const collectionPaintings = {
           technique: "unknown",
           imageURL: lenvolDesDamnes,
           description: "Description for L'Envol des Damnés.",
+          isPopular: true,
         },
         {
           title: "L'Observateur Caché",
@@ -108,6 +98,25 @@ const collectionPaintings = {
           technique: "unknown",
           imageURL: leSilenceDuReflet,
           description: "Description for Le silence du reflet.",
+          isPopular: true,
+        },
+      ],
+    },
+    {
+      name: "résurrection",
+      coverImage: eveilDeLame,
+      paintings: [
+        {
+          title: "Éveil De L'âme",
+          artist: "Antoine Masia",
+          date: 2024,
+          dimensions: {
+            width: "unknown",
+            height: "unknown",
+          },
+          technique: "unknown",
+          imageURL: eveilDeLame,
+          description: "Description for Éveil De L'âme.",
         },
       ],
     },

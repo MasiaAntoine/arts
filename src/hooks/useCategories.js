@@ -1,4 +1,4 @@
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import collectionPaintings from "../data/collectionPaintings";
 
 export default function useCategories() {
@@ -10,7 +10,19 @@ export default function useCategories() {
     })),
   );
 
+  const activeCategory = computed(() =>
+    categories.value.find((category) => category.isActive),
+  );
+
+  const setActiveCategory = (id) => {
+    categories.value.forEach((category) => {
+      category.isActive = category.id === id;
+    });
+  };
+
   return {
     categories,
+    activeCategory,
+    setActiveCategory,
   };
 }

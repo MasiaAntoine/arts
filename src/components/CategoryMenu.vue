@@ -9,10 +9,13 @@ const props = defineProps({
   },
 });
 
+const emit = defineEmits(["set-active-category"]);
+
 const setActiveCategory = (id) => {
   props.categories.forEach((category) => {
     category.isActive = category.id === id;
   });
+  emit("set-active-category", id);
 };
 </script>
 
@@ -27,6 +30,7 @@ const setActiveCategory = (id) => {
           :isActive="category.isActive"
           @click="setActiveCategory(category.id)"
         />
-      </ul></nav
-  ></SectionApp>
+      </ul>
+    </nav>
+  </SectionApp>
 </template>
