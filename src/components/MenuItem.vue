@@ -15,7 +15,7 @@ defineProps({
   <li
     @click="$emit('click')"
     :class="[
-      'bg-gray-100 px-5 flex gap-4 w-72 items-center rounded-2xl justify-between cursor-pointer group transition-all duration-300 hover:bg-orange-200',
+      'bg-gray-100 px-5 flex gap-4 items-center rounded-2xl justify-between cursor-pointer group transition-all duration-300 hover:bg-orange-200 w-full',
       { 'bg-orange-400': isActive },
     ]"
   >

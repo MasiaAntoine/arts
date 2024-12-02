@@ -5,6 +5,7 @@ import useCategories from "@/hooks/useCategories";
 import usePaintings from "@/hooks/usePaintings";
 import CategoryMenu from "@/components/CategoryMenu.vue";
 import PaintingsSection from "./components/PaintingsSection.vue";
+import HeaderApp from "@/components/HeaderApp.vue";
 
 const { categories, activeCategory, setActiveCategory } = useCategories();
 const { popularPaintings, noPopularPaintings } = usePaintings(
@@ -41,14 +42,16 @@ watch(
 </script>
 
 <template>
-  <div class="flex justify-between gap-4 h-full">
+  <HeaderApp />
+
+  <div class="flex justify-between gap-4 h-full py-4">
     <CategoryMenu
-      class="w-[30%]"
+      class="w-96"
       :categories="categories"
       @set-active-category="setActiveCategory"
     />
     <PaintingsSection
-      class="w-[70%]"
+      class="w-full"
       :activeCategory="activeCategory"
       :popularPaintings="popularPaintings"
       :noPopularPaintings="noPopularPaintings"

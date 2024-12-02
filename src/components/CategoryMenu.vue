@@ -28,7 +28,7 @@ const setActiveCategory = (id) => {
 
 <template>
   <SectionApp>
-    <nav>
+    <nav class="w-full">
       <ul class="flex flex-col gap-4">
         <MenuItem
           v-for="category in categories"
