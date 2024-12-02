@@ -1,4 +1,5 @@
 <script setup>
+import { useRouter } from "vue-router";
 import MenuItem from "./MenuItem.vue";
 import SectionApp from "./SectionApp.vue";
 
@@ -11,11 +12,17 @@ const props = defineProps({
 
 const emit = defineEmits(["set-active-category"]);
 
+const router = useRouter();
+
 const setActiveCategory = (id) => {
-  props.categories.forEach((category) => {
-    category.isActive = category.id === id;
-  });
-  emit("set-active-category", id);
+  const category = props.categories.find((category) => category.id === id);
+  if (category) {
+    props.categories.forEach((category) => {
+      category.isActive = category.id === id;
+    });
+    emit("set-active-category", id);
+    router.push(`/${category.routerName}`);
+  }
 };
 </script>
 

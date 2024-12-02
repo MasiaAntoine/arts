@@ -1,4 +1,6 @@
 <script setup>
+import { onMounted, watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
 import useCategories from "@/hooks/useCategories";
 import usePaintings from "@/hooks/usePaintings";
 import CategoryMenu from "@/components/CategoryMenu.vue";
@@ -8,6 +10,33 @@ const { categories, activeCategory, setActiveCategory } = useCategories();
 const { popularPaintings, noPopularPaintings } = usePaintings(
   categories,
   activeCategory,
+);
+
+const router = useRouter();
+const route = useRoute();
+
+const updateActiveCategory = (nameCat) => {
+  const category = categories.value.find((cat) => cat.routerName === nameCat);
+  if (category) {
+    setActiveCategory(category.id);
+  } else {
+    const firstCategory = categories.value[0];
+    if (firstCategory) {
+      router.push(`/${firstCategory.routerName}`);
+    }
+  }
+};
+
+onMounted(() => {
+  const nameCat = route.params.nameCat;
+  updateActiveCategory(nameCat);
+});
+
+watch(
+  () => route.params.nameCat,
+  (newNameCat) => {
+    updateActiveCategory(newNameCat);
+  },
 );
 </script>
 

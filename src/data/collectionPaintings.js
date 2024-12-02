@@ -11,6 +11,7 @@ const collectionPaintings = {
   categories: [
     {
       name: "catharsis",
+      routerName: "catharsis",
       coverImage: eclatsDespoir,
       paintings: [
         {
@@ -92,6 +93,7 @@ const collectionPaintings = {
     },
     {
       name: "résurrection",
+      routerName: "resurrection",
       coverImage: eveilDeLame,
       paintings: [
         {
