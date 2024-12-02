@@ -27,7 +27,7 @@ const setActiveCategory = (id) => {
 </script>
 
 <template>
-  <SectionApp>
+  <SectionApp class="hidden lg:block">
     <nav class="w-full">
       <ul class="flex flex-col gap-4">
         <MenuItem

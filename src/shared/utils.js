@@ -16,3 +16,10 @@ export const reformatDate = (dateStr) => {
   const [month, day, year] = dateStr.split("/");
   return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
 };
+
+export const truncateText = (text, maxLength) => {
+  if (text.length <= maxLength) {
+    return text;
+  }
+  return text.slice(0, maxLength) + "...";
+};

@@ -13,9 +13,11 @@ defineProps({
   <div class="pb-12" v-if="paintings.length >= 1">
     <h2 class="text-2xl pb-2">Œuvres Populaires</h2>
 
-    <div class="w-[67vw] flex gap-8 overflow-x-auto h-52 no-scrollbar">
+    <div
+      class="xl:w-[73vw] lg:w-[67vw] flex gap-8 overflow-x-auto h-52 no-scrollbar"
+    >
       <div
-        class="flex-none w-[25rem] p-5 rounded-xl h-36 relative top-14 group cursor-pointer"
+        class="flex-none w-full sm:w-[25rem] p-5 rounded-xl h-36 relative top-14 group cursor-pointer"
         v-for="painting in paintings"
         :key="painting.title"
         :style="{

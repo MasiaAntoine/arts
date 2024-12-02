@@ -47,7 +47,7 @@ watch(
 
     <div class="flex justify-between gap-4 h-full">
       <CategoryMenu
-        class="w-96"
+        class="min-w-72"
         :categories="categories"
         @set-active-category="setActiveCategory"
       />

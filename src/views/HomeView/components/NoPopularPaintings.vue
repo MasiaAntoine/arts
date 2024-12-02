@@ -17,10 +17,8 @@ const shouldCenter = computed(() => {
     return length >= 5;
   } else if (window.innerWidth >= 768) {
     return length >= 4;
-  } else if (window.innerWidth >= 640) {
-    return length >= 2;
   } else {
-    return false;
+    return length >= 2;
   }
 });
 </script>
@@ -37,7 +35,7 @@ const shouldCenter = computed(() => {
       }"
     >
       <li
-        class="flex flex-col items-center gap-2 cursor-pointer group xl:flex-[1_1_calc((100%/6)-40px)] xl:max-w-[calc((100%/6)-40px)] lg:flex-[1_1_calc((100%/5)-40px)] lg:max-w-[calc((100%/5)-40px)] md:flex-[1_1_calc((100%/3)-40px)] md:max-w-[calc((100%/3)-40px)] sm:flex-[1_1_calc((100%/2)-40px)] sm:max-w-[calc((100%/2)-40px)]"
+        class="flex flex-col items-center gap-2 cursor-pointer group xl:flex-[1_1_calc((100%/6)-40px)] xl:max-w-[calc((100%/6)-40px)] lg:flex-[1_1_calc((100%/5)-40px)] lg:max-w-[calc((100%/5)-40px)] md:flex-[1_1_calc((100%/4)-40px)] md:max-w-[calc((100%/4)-40px)] flex-[1_1_calc((100%/2)-40px)] max-w-[calc((100%/2)-40px)]"
         v-for="painting in paintings"
         :key="painting.title"
       >
