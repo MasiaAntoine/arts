@@ -43,11 +43,12 @@ watch(
 <template>
   <div class="flex justify-between gap-4 h-full">
     <CategoryMenu
-      class="w-96"
+      class="w-[30%]"
       :categories="categories"
       @set-active-category="setActiveCategory"
     />
     <PaintingsSection
+      class="w-[70%]"
       :activeCategory="activeCategory"
       :popularPaintings="popularPaintings"
       :noPopularPaintings="noPopularPaintings"

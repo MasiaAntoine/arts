@@ -1,29 +1,12 @@
 <script setup>
+import { reformatDate } from "@/shared/utils";
+
 defineProps({
   paintings: {
     type: Array,
     required: true,
   },
 });
-
-const reformatDate = (dateStr) => {
-  const months = [
-    "janv.",
-    "févr.",
-    "mars",
-    "avr.",
-    "mai",
-    "juin",
-    "juil.",
-    "août",
-    "sept.",
-    "oct.",
-    "nov.",
-    "déc.",
-  ];
-  const [month, day, year] = dateStr.split("/");
-  return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
-};
 </script>
 
 <template>
