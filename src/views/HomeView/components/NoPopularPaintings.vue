@@ -25,7 +25,7 @@ const shouldCenter = computed(() => {
 
 <template>
   <div v-if="paintings.length >= 1">
-    <h2 class="text-2xl pb-3">Autres Œuvres</h2>
+    <h2 class="text-2xl pb-3">Œuvres</h2>
 
     <ul
       :class="{
