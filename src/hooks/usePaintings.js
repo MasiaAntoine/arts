@@ -7,8 +7,13 @@ export default function usePaintings(categories, activeCategory) {
     paintings.value.filter((painting) => painting.isPopular),
   );
 
+  const noPopularPaintings = computed(() =>
+    paintings.value.filter((painting) => !painting.isPopular),
+  );
+
   return {
     paintings,
     popularPaintings,
+    noPopularPaintings,
   };
 }
