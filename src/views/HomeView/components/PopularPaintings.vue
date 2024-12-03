@@ -1,12 +1,51 @@
 <script setup>
+import { ref, onMounted, watch, nextTick } from "vue";
 import { reformatDate } from "@/shared/utils";
+import PaginationDots from "./PaginationDots.vue";
 
-defineProps({
+const props = defineProps({
   paintings: {
     type: Array,
     required: true,
   },
 });
+
+const paintingRefs = ref([]);
+const activeIndex = ref(0);
+
+const scrollToPainting = async (index) => {
+  activeIndex.value = index;
+  await nextTick();
+  const paintingElement = paintingRefs.value[index];
+  if (paintingElement) {
+    paintingElement.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+  }
+};
+
+onMounted(async () => {
+  scrollToPainting(0);
+  updatePaintingRefs();
+});
+
+watch(
+  () => props.paintings,
+  async () => {
+    await nextTick();
+    updatePaintingRefs();
+  },
+);
+
+const updatePaintingRefs = () => {
+  paintingRefs.value = [];
+  const paintingElements = document.querySelectorAll("[data-painting-ref]");
+  paintingElements.forEach((el, index) => {
+    paintingRefs.value[index] = el;
+  });
+};
 </script>
 
 <template>
@@ -17,14 +56,15 @@ defineProps({
       class="xl:w-[73vw] lg:w-[67vw] flex gap-8 overflow-x-auto h-52 no-scrollbar"
     >
       <div
-        class="flex-none w-full sm:w-[25rem] p-5 rounded-xl h-36 relative top-14 group cursor-pointer"
         v-for="painting in paintings"
         :key="painting.title"
+        class="flex-none w-full sm:w-[25rem] p-5 rounded-xl h-36 relative top-14 group cursor-pointer"
         :style="{
           backgroundImage: `url(${painting.imageURL})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }"
+        data-painting-ref
       >
         <img
           class="h-44 absolute bottom-4 rounded-xl group-hover:scale-105 group-hover:-rotate-2 transition-all duration-300 z-30 shadow-md shadow-gray-100"
@@ -34,9 +74,7 @@ defineProps({
 
         <div class="h-full ml-40 flex items-center absolute z-20 top-0">
           <div class="text-white max-w-48">
-            <h3 class="text-xl">
-              {{ painting.title }}
-            </h3>
+            <h3 class="text-xl">{{ painting.title }}</h3>
             <div>{{ reformatDate(painting.date) }}</div>
           </div>
         </div>
@@ -46,5 +84,11 @@ defineProps({
         ></div>
       </div>
     </div>
+
+    <PaginationDots
+      :paintings="paintings"
+      :activeIndex="activeIndex"
+      @dot-click="scrollToPainting"
+    />
   </div>
 </template>
