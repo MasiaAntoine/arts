@@ -50,7 +50,7 @@ updateActiveCategory(route.params.nameCat);
     :class="isMiddleLineVisible ? '-left-[100vw]' : 'left-0'"
     class="bg-white h-screen w-screen absolute z-40 top-0 transition-all duration-500 p-10"
   >
-    <HeaderApp class="h-24" />
+    <HeaderApp class="h-16 sm:h-24" />
     <nav class="mt-10">
       <ul class="flex flex-col gap-4">
         <MenuItem

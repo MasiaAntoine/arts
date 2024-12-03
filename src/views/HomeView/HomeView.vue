@@ -49,9 +49,9 @@ watch(
   <BurgerMenu />
 
   <div class="flex flex-col h-full lg:h-full gap-6 lg:justify-between">
-    <HeaderApp class="h-24" />
+    <HeaderApp class="h-16 sm:h-24" />
 
-    <div class="flex justify-between gap-4 h-[83%] lg:h-full">
+    <div class="flex justify-between gap-4 h-full">
       <CategoryMenu
         class="min-w-72"
         :categories="categories"
