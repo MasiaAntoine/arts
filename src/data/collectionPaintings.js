@@ -12,6 +12,7 @@ const collectionPaintings = {
     {
       name: "catharsis",
       routerName: "catharsis",
+      description: "Description for Catharsis.",
       coverImage: eclatsDespoir,
       paintings: [
         {
@@ -94,6 +95,7 @@ const collectionPaintings = {
     {
       name: "résurrection",
       routerName: "resurrection",
+      description: "Description for Résurrection.",
       coverImage: eveilDeLame,
       paintings: [
         {

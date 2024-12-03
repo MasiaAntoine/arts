@@ -23,3 +23,13 @@ export const truncateText = (text, maxLength) => {
   }
   return text.slice(0, maxLength) + "...";
 };
+
+export const updateMetaTags = (title, description, coverImage) => {
+  document.title = title;
+  document
+    .querySelector('meta[name="description"]')
+    .setAttribute("content", description);
+  document
+    .querySelector('meta[property="og:image"]')
+    .setAttribute("content", coverImage);
+};

@@ -7,6 +7,7 @@ import CategoryMenu from "@/components/CategoryMenu.vue";
 import PaintingsSection from "./components/PaintingsSection.vue";
 import HeaderApp from "@/components/HeaderApp.vue";
 import BurgerMenu from "@/components/BurgerMenu.vue";
+import { updateMetaTags } from "@/shared/utils";
 
 const { categories, activeCategory, setActiveCategory } = useCategories();
 const { popularPaintings, noPopularPaintings } = usePaintings(
@@ -21,10 +22,12 @@ const updateActiveCategory = (nameCat) => {
   const category = categories.value.find((cat) => cat.routerName === nameCat);
   if (category) {
     setActiveCategory(category.id);
+    updateMetaTags(category.name, category.description, category.coverImage);
   } else {
     const firstCategory = categories.value[0];
     if (firstCategory) {
       router.push(`/${firstCategory.routerName}`);
+      updateMetaTags(category.name, category.description, category.coverImage);
     }
   }
 };
