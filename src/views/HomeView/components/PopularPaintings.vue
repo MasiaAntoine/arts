@@ -20,15 +20,33 @@ const scrollToPainting = async (index) => {
   if (paintingElement) {
     paintingElement.scrollIntoView({
       behavior: "smooth",
-      block: "nearest",
-      inline: "start",
+      block: "center",
+      inline: "center",
     });
   }
 };
 
+const updateActiveIndexOnScroll = (entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const index = paintingRefs.value.indexOf(entry.target);
+      if (index !== -1) {
+        activeIndex.value = index;
+      }
+    }
+  });
+};
+
+const observer = new IntersectionObserver(updateActiveIndexOnScroll, {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+});
+
 onMounted(async () => {
   scrollToPainting(0);
   updatePaintingRefs();
+  paintingRefs.value.forEach((el) => observer.observe(el));
 });
 
 watch(
@@ -36,6 +54,7 @@ watch(
   async () => {
     await nextTick();
     updatePaintingRefs();
+    paintingRefs.value.forEach((el) => observer.observe(el));
   },
 );
 
