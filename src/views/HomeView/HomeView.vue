@@ -6,6 +6,7 @@ import usePaintings from "@/hooks/usePaintings";
 import CategoryMenu from "@/components/CategoryMenu.vue";
 import PaintingsSection from "./components/PaintingsSection.vue";
 import HeaderApp from "@/components/HeaderApp.vue";
+import BurgerMenu from "@/components/BurgerMenu.vue";
 
 const { categories, activeCategory, setActiveCategory } = useCategories();
 const { popularPaintings, noPopularPaintings } = usePaintings(
@@ -42,6 +43,8 @@ watch(
 </script>
 
 <template>
+  <BurgerMenu />
+
   <div class="flex flex-col h-full lg:h-full gap-6 lg:justify-between">
     <HeaderApp class="h-24" />
 
