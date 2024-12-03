@@ -1,5 +1,6 @@
 <script setup>
-import { useRouter } from "vue-router";
+import { watch } from "vue";
+import { useRouter, useRoute } from "vue-router";
 import HeaderApp from "@/components/HeaderApp.vue";
 import MenuItem from "@/components/MenuItem.vue";
 import useCategories from "@/hooks/useCategories";
@@ -15,9 +16,9 @@ const emit = defineEmits(["set-active-category", "category-clicked"]);
 
 const { categories, setActiveCategory } = useCategories();
 const router = useRouter();
+const route = useRoute();
 
 const handleSetActiveCategory = (id) => {
-  console.log(id);
   const category = categories.value.find((category) => category.id === id);
   if (category) {
     setActiveCategory(id);
@@ -26,6 +27,22 @@ const handleSetActiveCategory = (id) => {
     router.push(`/${category.routerName}`);
   }
 };
+
+const updateActiveCategory = (nameCat) => {
+  const category = categories.value.find((cat) => cat.routerName === nameCat);
+  if (category) {
+    setActiveCategory(category.id);
+  }
+};
+
+watch(
+  () => route.params.nameCat,
+  (newNameCat) => {
+    updateActiveCategory(newNameCat);
+  },
+);
+
+updateActiveCategory(route.params.nameCat);
 </script>
 
 <template>
