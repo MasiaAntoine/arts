@@ -12,13 +12,17 @@ defineProps({
 </script>
 
 <template>
-  <div class="justify-center gap-4 mt-3 flex">
+  <div class="justify-center flex">
     <div
-      :class="index === activeIndex ? 'bg-orange-600' : 'bg-orange-400'"
-      class="size-3 rounded-full cursor-pointer"
+      class="size-8 flex justify-center items-center cursor-pointer"
       v-for="(painting, index) in paintings"
       :key="painting.title"
       @click="$emit('dot-click', index)"
-    ></div>
+    >
+      <div
+        :class="index === activeIndex ? 'bg-orange-600' : 'bg-orange-400'"
+        class="size-3 rounded-full"
+      ></div>
+    </div>
   </div>
 </template>
