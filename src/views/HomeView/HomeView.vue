@@ -48,8 +48,8 @@ watch(
 <template>
   <BurgerMenu />
 
-  <div class="flex flex-col h-full lg:h-full gap-6 lg:justify-between">
-    <HeaderApp class="h-16 sm:h-24" />
+  <div class="flex flex-col h-full gap-6 lg:justify-between">
+    <HeaderApp class="h-16 sm:h-24 mt-4" />
 
     <div class="flex justify-between gap-4 h-full">
       <CategoryMenu

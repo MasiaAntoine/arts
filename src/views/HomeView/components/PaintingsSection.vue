@@ -25,9 +25,7 @@ defineProps({
     <h1 class="text-5xl font-extrabold uppercase italic">
       {{ activeCategory?.name }}
     </h1>
-    <SectionApp
-      class="flex flex-col justify-between gap-10 h-[73.5vh] sm:h-full"
-    >
+    <SectionApp class="flex flex-col justify-between gap-10 h-[60vh] sm:h-full">
       <div class="overflow-y-auto no-scrollbar">
         <div>
           <PopularPaintings :paintings="popularPaintings" />
