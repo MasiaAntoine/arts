@@ -21,7 +21,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 h-[calc(100%-2rem)] sm:h-full">
+  <div class="flex flex-col gap-4 h-full">
     <h1 class="text-5xl font-extrabold uppercase italic">
       {{ activeCategory?.name }}
     </h1>

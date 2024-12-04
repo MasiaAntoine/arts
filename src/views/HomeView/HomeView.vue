@@ -49,7 +49,7 @@ watch(
   <BurgerMenu />
 
   <div
-    class="flex flex-col sm:h-full h-[calc(100vh-1rem)] gap-6 lg:justify-between"
+    class="flex flex-col sm:h-full h-[calc(82.5vh-1rem)] gap-6 lg:justify-between"
   >
     <HeaderApp class="h-16 sm:h-24 mt-4" />
 
