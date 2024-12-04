@@ -111,9 +111,10 @@ const collectionPaintings = {
             width: undefined,
             height: undefined,
           },
-          technique: undefined,
+          technique: "peinture acrylique",
           imageURL: eveilDeLame,
-          description: "Description for Éveil De L'âme.",
+          description:
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti mollitia vitae expedita ratione. Repellendus, eius quis possimus excepturi quae repellat architecto cum. Possimus cumque corporis vel ad ipsum tempora vero.",
         },
         {
           routerName: "laube-de-leternite",

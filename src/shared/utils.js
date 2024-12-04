@@ -17,6 +17,25 @@ export const reformatDate = (dateStr) => {
   return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
 };
 
+export const reformatDateFullMonth = (dateStr) => {
+  const months = [
+    "janvier",
+    "février",
+    "mars",
+    "avril",
+    "mai",
+    "juin",
+    "juillet",
+    "août",
+    "septembre",
+    "octobre",
+    "novembre",
+    "décembre",
+  ];
+  const [month, day, year] = dateStr.split("/");
+  return `${parseInt(day)} ${months[parseInt(month) - 1]} ${year}`;
+};
+
 export const truncateText = (text, maxLength) => {
   if (text.length <= maxLength) {
     return text;
