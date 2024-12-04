@@ -33,3 +33,7 @@ export const updateMetaTags = (title, description, coverImage) => {
     .querySelector('meta[property="og:image"]')
     .setAttribute("content", coverImage);
 };
+
+export const capitalizeWords = (str) => {
+  return str.replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase());
+};
