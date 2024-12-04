@@ -11,6 +11,6 @@ import signature from "@/assets/signature.png";
       :src="signature"
       alt="signature Masia Antoine Arts logo"
     />
-    <div class="text-1xl">Arts Masia Antoine</div>
+    <div class="text-1xl">Arts Antoine Masia</div>
   </header>
 </template>

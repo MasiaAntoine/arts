@@ -48,17 +48,19 @@ watch(
 <template>
   <BurgerMenu />
 
-  <div class="flex flex-col h-full gap-6 lg:justify-between">
+  <div
+    class="flex flex-col sm:h-full h-[calc(100vh-1rem)] gap-6 lg:justify-between"
+  >
     <HeaderApp class="h-16 sm:h-24 mt-4" />
 
-    <div class="flex justify-between gap-4 h-full">
+    <div class="flex justify-between gap-4 sm:h-full h-[calc(100%-6.5rem)]">
       <CategoryMenu
         class="min-w-72"
         :categories="categories"
         @set-active-category="setActiveCategory"
       />
       <PaintingsSection
-        class="w-full"
+        class="w-full lg:w-[calc(100%-18rem-1rem)]"
         :activeCategory="activeCategory"
         :popularPaintings="popularPaintings"
         :noPopularPaintings="noPopularPaintings"
