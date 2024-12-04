@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from "vue";
+import { useRouter } from "vue-router";
 import { reformatDate } from "@/shared/utils";
 
 const props = defineProps({
@@ -8,6 +9,8 @@ const props = defineProps({
     required: true,
   },
 });
+
+const router = useRouter();
 
 const shouldCenter = computed(() => {
   const length = props.paintings.length;
@@ -21,6 +24,11 @@ const shouldCenter = computed(() => {
     return length >= 2;
   }
 });
+
+const goToPainting = (routerName) => {
+  const nameCat = router.currentRoute.value.params.nameCat;
+  router.push({ name: "painting", params: { nameCat, routerName } });
+};
 </script>
 
 <template>
@@ -38,6 +46,7 @@ const shouldCenter = computed(() => {
         class="flex flex-col items-center gap-2 cursor-pointer group xl:flex-[1_1_calc((100%/6)-40px)] xl:max-w-[calc((100%/6)-40px)] lg:flex-[1_1_calc((100%/5)-40px)] lg:max-w-[calc((100%/5)-40px)] md:flex-[1_1_calc((100%/4)-40px)] md:max-w-[calc((100%/4)-40px)] flex-[1_1_calc((100%/2)-40px)] max-w-[calc((100%/2)-40px)]"
         v-for="painting in paintings"
         :key="painting.title"
+        @click="goToPainting(painting.routerName)"
       >
         <img
           class="h-36 rounded-xl group-hover:scale-110 transition-all duration-300 shadow-md shadow-gray-800 min-w-28"

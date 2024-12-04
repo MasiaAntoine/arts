@@ -1,5 +1,6 @@
 <script setup>
 import { ref, onMounted, watch, nextTick } from "vue";
+import { useRouter } from "vue-router";
 import { reformatDate } from "@/shared/utils";
 import PaginationDots from "./PaginationDots.vue";
 
@@ -12,6 +13,7 @@ const props = defineProps({
 
 const paintingRefs = ref([]);
 const activeIndex = ref(0);
+const router = useRouter();
 
 const scrollToPainting = async (index) => {
   activeIndex.value = index;
@@ -65,6 +67,11 @@ const updatePaintingRefs = () => {
     paintingRefs.value[index] = el;
   });
 };
+
+const goToPainting = (routerName) => {
+  const nameCat = router.currentRoute.value.params.nameCat;
+  router.push({ name: "painting", params: { nameCat, routerName } });
+};
 </script>
 
 <template>
@@ -82,6 +89,7 @@ const updatePaintingRefs = () => {
           backgroundPosition: 'center',
         }"
         data-painting-ref
+        @click="goToPainting(painting.routerName)"
       >
         <img
           class="h-44 absolute bottom-4 rounded-xl group-hover:scale-105 group-hover:-rotate-2 transition-all duration-300 z-30 shadow-md shadow-gray-100"

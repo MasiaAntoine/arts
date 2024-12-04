@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { capitalizeWords } from "@/shared/utils";
-import useCategories from "@/hooks/useCategories"; // Assurez-vous que le chemin est correct
+import useCategories from "@/hooks/useCategories";
 
 const routes = [
   {
@@ -11,6 +11,18 @@ const routes = [
       title: "Page d'accueil",
       description: "Découvrez ma collection unique de toiles de peintures.",
     },
+  },
+  {
+    path: "/painting/:nameCat/:routerName",
+    name: "painting",
+    component: () => import("../views/PaintingView/PaintingView.vue"),
+    meta: {
+      title: "Détails de l'œuvre",
+    },
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/",
   },
 ];
 
