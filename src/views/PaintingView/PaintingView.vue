@@ -6,6 +6,7 @@ import collectionPaintings from "@/data/collectionPaintings";
 import SectionApp from "@/components/SectionApp.vue";
 import { reformatDateFullMonth } from "@/shared/utils";
 import CustomButton from "@/components/CustomButton.vue";
+import ImageZoom from "@/components/ImageZoom.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -42,24 +43,25 @@ const goToHome = () => {
       >Retour</CustomButton
     >
 
-    <div class="sm:px-20">
+    <div class="lg:px-20">
       <div
-        class="flex flex-col sm:flex-row items-center gap-6 sm:gap-20 sm:px-20"
+        class="flex flex-col lg:flex-row items-center gap-6 lg:gap-20 lg:px-20"
       >
-        <img
+        <ImageZoom
+          class="h-[40vh] sm:h-72 shadow-2xl shadow-black cursor-pointer hover:scale-110 sm:hover:scale-125 transition-all duration-300"
           :src="painting.imageURL"
           :alt="painting.title"
-          class="my-4 h-[40vh] sm:h-72 shadow-2xl shadow-black cursor-pointer hover:scale-110 sm:hover:scale-125 transition-all duration-300"
+          :options="{ margin: 24, background: 'rgb(0, 0, 0, 0.9)' }"
         />
 
-        <div class="w-full text-center sm:text-left">
-          <h1 class="text-4xl font-bold">{{ painting.title }}</h1>
+        <div class="w-full text-center lg:text-left">
+          <h1 class="text-4xl font-bold mt-7 lg:mt-0">{{ painting.title }}</h1>
 
           <p class="text-lg my-3 font-semibold">{{ painting.artist }}</p>
         </div>
       </div>
 
-      <SectionApp class="mt-10 sm:px-24 sm:py-12">
+      <SectionApp class="mt-14 sm:px-24 sm:py-12">
         <div
           class="flex flex-col sm:flex-row justify-between items-top gap-5 sm:gap-28"
         >
