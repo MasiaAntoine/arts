@@ -5,13 +5,13 @@ const route = useRoute();
 </script>
 
 <template>
-  <div class="text-black relative z-10">
+  <div class="text-black">
     <RouterView v-slot="{ Component }">
       <transition
         :name="route.name === 'painting' ? 'slide-fade' : 'slide-fade-reverse'"
         mode="out-in"
       >
-        <component :is="Component" class="relative z-20" />
+        <component :is="Component" />
       </transition>
     </RouterView>
   </div>

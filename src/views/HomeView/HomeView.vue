@@ -47,12 +47,10 @@ watch(
     <BurgerMenu />
 
     <div class="px-2 lg:px-12 lg:py-10 py-2 sm:h-screen">
-      <div
-        class="flex flex-col sm:h-full h-[calc(82.5vh-1rem)] gap-6 lg:justify-between"
-      >
-        <HeaderApp class="h-16 sm:h-24 mt-4" />
+      <div class="sm:flex flex-col gap-6 sm:h-full">
+        <HeaderApp class="h-24 sm:mb-0 mb-4 sm:mt-0 mt-1" />
 
-        <div class="flex justify-between gap-4 sm:h-full h-[calc(100%-6.5rem)]">
+        <div class="block sm:flex justify-between gap-4 sm:h-[74vh] h-[62vh]">
           <CategoryMenu
             class="min-w-72"
             :categories="categories"

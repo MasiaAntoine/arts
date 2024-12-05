@@ -49,7 +49,7 @@ const goToHome = () => {
         <img
           :src="painting.imageURL"
           :alt="painting.title"
-          class="my-4 h-[40vh] sm:h-72 shadow-2xl shadow-black cursor-pointer hover:scale-125 transition-all duration-300"
+          class="my-4 h-[40vh] sm:h-72 shadow-2xl shadow-black cursor-pointer hover:scale-110 sm:hover:scale-125 transition-all duration-300"
         />
 
         <div class="w-full text-center sm:text-left">

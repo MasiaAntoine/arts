@@ -7,7 +7,7 @@ import signature from "@/assets/signature.png";
     class="flex flex-col gap-2 lg:flex-row justify-center lg:justify-between items-center px-10"
   >
     <img
-      class="h-full"
+      class="h-[55%] lg:h-full"
       :src="signature"
       alt="signature Masia Antoine Arts logo"
     />

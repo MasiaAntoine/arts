@@ -21,18 +21,14 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 h-full">
-    <h1 class="text-5xl font-extrabold uppercase italic">
+  <div class="lg:flex flex-col gap-4 h-full">
+    <h1 class="mb-4 lg:mb-0 text-5xl font-extrabold uppercase italic">
       {{ activeCategory?.name }}
     </h1>
-    <SectionApp
-      class="flex flex-col justify-between h-[calc(100%-2rem)] md:h-[calc(100%-4rem)] xl:h-full"
-    >
-      <div class="overflow-y-auto no-scrollbar">
-        <div>
-          <PopularPaintings :paintings="popularPaintings" />
-          <NoPopularPaintings :paintings="noPopularPaintings" />
-        </div>
+    <SectionApp class="h-[calc(100%-2rem)] md:h-[calc(100%-4rem)] xl:h-full">
+      <div class="overflow-y-auto no-scrollbar h-full">
+        <PopularPaintings :paintings="popularPaintings" />
+        <NoPopularPaintings :paintings="noPopularPaintings" />
         <FooterApp />
       </div>
     </SectionApp>
