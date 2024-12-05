@@ -25,7 +25,7 @@ defineProps({
     <h1 class="mb-4 lg:mb-0 text-5xl font-extrabold uppercase italic">
       {{ activeCategory?.name }}
     </h1>
-    <SectionApp class="h-[calc(100%-2rem)] md:h-[calc(100%-4rem)] xl:h-full">
+    <SectionApp class="h-[calc(100%-2rem)] sm:h-[calc(100%-4rem)]">
       <div class="overflow-y-auto no-scrollbar h-full">
         <PopularPaintings :paintings="popularPaintings" />
         <NoPopularPaintings :paintings="noPopularPaintings" />
