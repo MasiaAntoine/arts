@@ -23,9 +23,10 @@ const collectionPaintings = {
             width: undefined,
             height: undefined,
           },
-          technique: undefined,
+          technique:
+            "Pour cette œuvre, j'ai utilisé de la peinture acrylique. J'ai réalisé les petites âmes avec mes doigts et créé les éclats en caressant délicatement les poils du pinceau pour projeter des points de lumière.",
           imageURL: eclatsDespoir,
-          description: "Description for Éclats d'Espoir.",
+          description: undefined,
           isPopular: true,
         },
         {
@@ -37,9 +38,10 @@ const collectionPaintings = {
             width: undefined,
             height: undefined,
           },
-          technique: undefined,
+          technique:
+            "Pour cette œuvre, j'ai utilisé de la peinture acrylique et mes mains ainsi que mes doigts pour créer les textures sombres et profondes.",
           imageURL: lenfermementDesTenebres,
-          description: "Description for L'Enfermement des Ténèbres.",
+          description: undefined,
         },
         {
           routerName: "lenvol-des-damnes",
@@ -50,9 +52,10 @@ const collectionPaintings = {
             width: undefined,
             height: undefined,
           },
-          technique: undefined,
+          technique:
+            "Pour cette œuvre, j'ai utilisé de la peinture acrylique appliquée au pinceau pour des détails précis et des formes dynamiques.",
           imageURL: lenvolDesDamnes,
-          description: "Description for L'Envol des Damnés.",
+          description: undefined,
           isPopular: true,
         },
         {
@@ -64,9 +67,10 @@ const collectionPaintings = {
             width: undefined,
             height: undefined,
           },
-          technique: undefined,
+          technique:
+            "Pour cette œuvre, j'ai utilisé de la peinture acrylique et j'ai travaillé avec mes mains et mes doigts pour donner une texture immersive et énigmatique.",
           imageURL: lobservateurCache,
-          description: "Description for L'Observateur Caché.",
+          description: undefined,
         },
         {
           routerName: "le-poids-de-lamour",
@@ -77,22 +81,24 @@ const collectionPaintings = {
             width: undefined,
             height: undefined,
           },
-          technique: undefined,
+          technique:
+            "Pour cette œuvre, j'ai utilisé de la peinture acrylique et mes mains pour exprimer la lourdeur émotionnelle à travers des gestes spontanés.",
           imageURL: lePoidsDeLAmour,
-          description: "Description for Le Poids de l'Amour.",
+          description: undefined,
         },
         {
           routerName: "le-silence-du-reflet",
-          title: "Le silence du reflet",
+          title: "Le Silence du Reflet",
           artist: "Antoine Masia",
           date: "11/26/2024",
           dimensions: {
             width: undefined,
             height: undefined,
           },
-          technique: undefined,
+          technique:
+            "Pour cette œuvre, j'ai utilisé de la peinture acrylique et j'ai travaillé avec mes mains et mes doigts pour créer des jeux de lumière et de reflet.",
           imageURL: leSilenceDuReflet,
-          description: "Description for Le silence du reflet.",
+          description: undefined,
           isPopular: true,
         },
       ],
@@ -111,23 +117,24 @@ const collectionPaintings = {
             width: undefined,
             height: undefined,
           },
-          technique: "peinture acrylique",
+          technique:
+            "Pour cette œuvre, j'ai utilisé de la peinture acrylique, mes mains et mes doigts pour donner vie à des mouvements organiques et puissants.",
           imageURL: eveilDeLame,
-          description:
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti mollitia vitae expedita ratione. Repellendus, eius quis possimus excepturi quae repellat architecto cum. Possimus cumque corporis vel ad ipsum tempora vero.",
+          description: undefined,
         },
         {
           routerName: "laube-de-leternite",
-          title: "Laube De L'éternité",
+          title: "L'Aube de L'éternité",
           artist: "Antoine Masia",
           date: "11/30/2024",
           dimensions: {
             width: undefined,
             height: undefined,
           },
-          technique: undefined,
+          technique:
+            "Pour cette œuvre, j'ai utilisé de la peinture acrylique appliquée avec mes mains pour les formes principales, et j'ai créé les éclats en caressant délicatement les poils du pinceau pour projeter de petits points de lumière.",
           imageURL: laubeDeLeternite,
-          description: "Description for Laube De L'éternité.",
+          description: undefined,
         },
       ],
     },

@@ -63,7 +63,7 @@ const goToHome = () => {
         <div
           class="flex flex-col sm:flex-row justify-between items-top gap-5 sm:gap-28"
         >
-          <div class="w-full sm:w-2/4">
+          <div v-if="painting.description" class="w-full sm:w-2/4">
             <h2 class="text-lg font-semibold mb-4">Description</h2>
             <p class="text-sm">{{ painting.description }}</p>
           </div>
