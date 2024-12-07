@@ -50,7 +50,7 @@ const goToPainting = (routerName) => {
       >
         <img
           class="h-36 rounded-xl group-hover:scale-110 transition-all duration-300 shadow-md shadow-gray-800 min-w-28"
-          :src="painting.imageURL"
+          :src="painting.imageCompressedURL"
           :alt="painting.title"
         />
         <div class="text-center w-full">

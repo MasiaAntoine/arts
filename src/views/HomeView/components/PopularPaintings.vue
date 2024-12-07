@@ -84,7 +84,7 @@ const goToPainting = (routerName) => {
         :key="painting.title"
         class="flex-none w-full sm:w-[25rem] p-5 rounded-xl h-36 relative top-14 group cursor-pointer"
         :style="{
-          backgroundImage: `url(${painting.imageURL})`,
+          backgroundImage: `url(${painting.imageCompressedURL})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }"
@@ -93,7 +93,7 @@ const goToPainting = (routerName) => {
       >
         <img
           class="h-44 absolute bottom-4 rounded-xl group-hover:scale-105 group-hover:-rotate-2 transition-all duration-300 z-30 shadow-md shadow-gray-100"
-          :src="painting.imageURL"
+          :src="painting.imageCompressedURL"
           :alt="painting.title"
         />
 
